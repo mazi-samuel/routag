@@ -1,5 +1,5 @@
 {
-  "name": "tesla-landing-page",
+  "name": "routag",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -17,8 +17,8 @@
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.1.8",
+    "routag": "file:",
     "tesla-landing-page": "file:",
     "vite": "^6.3.5"
   }
 }
-
