@@ -7,16 +7,19 @@ html{
     scroll-behavior: smooth;
     font-family: 'uber move text', sans-serif;
 }
-.logo {
-    @apply flex items-center gap-4 top-[6.25rem] left-[15rem] z-10 h-50 w-50 p-[3.2rem];
+.section-1 {
+  @apply relative;
+}
+.logo-group {
+    @apply flex gap-4 top-[6.25rem] left-[15rem] z-10 h-50 w-50 p-[3.2rem] absolute;
   }
   
   .logo-text {
-    @apply text-[3.4rem] font-bold text-white;
+    @apply text-[3.4rem] font-bold text-white w-60;
     font-family: 'Space Grotesk', sans-serif;
   }
-  .intro-button {
-    @apply flex items-center gap-[10px] pt-8;
+  .intro-text {
+    @apply flex flex-col items-center gap-[10px] pt-8 absolute top-[200px] left-[15rem] z-10;
   }
   .main-content {
     @apply  w-full relative object-cover;
