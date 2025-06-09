@@ -12,23 +12,34 @@ html{
 }
 .logo-group {
     @apply flex gap-4 top-[6.25rem] left-[15rem] z-10 h-50 w-50 p-[3.2rem] absolute;
+    width: auto;
+    white-space: nowrap;
   }
   
   .logo-text {
-    @apply text-[3.4rem] font-bold text-white w-60;
+    @apply text-[3.4rem] font-bold text-white;
     font-family: 'Space Grotesk', sans-serif;
   }
   .intro-text {
-    @apply flex flex-col items-center gap-[10px] pt-8 absolute top-[200px] left-[15rem] z-10;
+    @apply flex flex-col items-center gap-[10px] pt-8 absolute top-[300px] left-[15rem] z-10;
+  }
+  .intro-text-2 {
+    @apply flex flex-col items-center gap-[10px] pt-8 absolute top-[350px] left-[15rem] z-10;
+  }
+  .intro-header{
+    @apply text-[3rem] text-white font-bold m-4;
+  }
+  .intro-paragraph{
+    @apply m-6 text-3xl text-white font-semibold
   }
   .main-content {
     @apply  w-full relative object-cover;
   }
   .download-buttons{
-    @apply flex flex-row items-center gap-2 w-[350px];
+    @apply flex flex-row items-center gap-2 w-[350px] absolute top-[450px] left-[15rem] z-10;
   }
   .stacked-phone{
-    @apply w-[532px];
+    @apply w-[532px] absolute top-[300px] left-[700px] z-10;
   }
   .phoning{
     @apply w-full h-auto;
