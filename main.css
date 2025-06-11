@@ -6,6 +6,7 @@ html{
     font-size: 62.5%;
     scroll-behavior: smooth;
     font-family: 'uber move text', sans-serif;
+    background-color: whitesmoke;
 }
 .section-1 {
   @apply relative;
@@ -41,6 +42,46 @@ html{
   .stacked-phone{
     @apply w-[532px] absolute top-[300px] left-[700px] z-10;
   }
-  .phoning{
-    @apply w-full h-auto;
-  }
+  .second-section {
+  @apply px-5 py-10 text-center max-w-[1240px] mt-[200px] mx-auto;
+}
+
+.second-start-text {
+  @apply mb-10;
+}
+
+.second-start-text h2 {
+  @apply text-[3.5rem] font-semibold mb-2.5 text-orange-600;
+}
+
+.second-start-text p {
+  @apply text-[1.2rem] text-[#100F0D] font-light;
+}
+
+.image-container {
+  @apply flex flex-wrap justify-center gap-[30px];
+}
+
+.image-card {
+  @apply relative max-w-[500px] w-full overflow-hidden rounded-[10px];
+}
+
+.image-card img {
+  @apply w-full h-auto block;
+}
+
+.image-text {
+  @apply absolute bottom-0 left-[18px] w-full p-5 pb-[80px] text-white text-left top-[68%];
+}
+
+.image-text h3 {
+  @apply m-0 mb-2.5 text-[18px] font-normal;
+}
+
+.image-text p {
+  @apply m-0 text-[1.3rem] font-extralight;
+}
+.blacky {
+  @apply text-black;
+}
+  
