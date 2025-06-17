@@ -84,4 +84,13 @@ html{
 .blacky {
   @apply text-black;
 }
-  
+
+.third-section {
+  @apply flex flex-col gap-20 items-center justify-center py-10 px-5 text-center max-w-[1240px] mx-auto mt-[100px];
+}
+.third-start-text {
+  @apply flex justify-center items-center flex-col gap-5;
+}
+.the-why {
+  @apply flex flex-row justify-center items-center gap-5;
+}
