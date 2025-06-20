@@ -86,51 +86,50 @@ html{
 }
 
 /* Third Section */
+/* Third Section Styling */
 .third-section {
-  @apply bg-[#C0BABA] bg-cover flex flex-col items-center p-10 text-center mt-[100px] rounded-tl-[20%];
+  @apply flex flex-col items-center bg-[#C0BABA] p-10 text-center mt-[100px] rounded-tl-[30%] h-[500px];
+  
+  background-size: cover;
 }
 
+
 .third-start-text {
-  @apply mb-10 max-w-[700px] content-center items-center;
+  @apply mb-10 mt-[100px];
+}
+
+.third-start-text h1 {
+  @apply text-[3.5rem] font-semibold mb-2.5 text-black;
+}
+
+.third-start-text p {
+  @apply text-[1.2rem] text-[#100F0D] font-light;
 }
 
 .the-why {
   @apply grid grid-cols-4 gap-5 justify-center max-w-[1200px];
 }
 
+
 .smally {
-  @apply bg-[silver] p-5 rounded-[10px] flex flex-col items-center justify-center text-center;
+  @apply bg-[silver] p-5 rounded-lg flex flex-col items-center justify-center text-center max-w-[150px];
 }
+.smally h4 {
+  @apply text-[1.3rem] font-semibold mb-2.5 text-black;
+}
+.smally p {
+  @apply text-[1.15rem] font-medium text-black;
+}
+
 
 .smally img {
-  @apply max-w-[100px] h-auto mb-[15px];
+  @apply max-w-[100px] h-auto mb-4;
 }
-
-/* Responsive for .the-why */
-@media (max-width: 768px) {
-  .the-why {
-    @apply grid-cols-2 mx-16;
-  }
-}
-
-@media (max-width: 430px) {
-  .the-why {
-    @apply grid-cols-2 w-full grid justify-center;
-  }
-
-  .smally {
-    @apply max-w-[200px] w-full h-auto p-2.5;
-  }
-
-  .third-section {
-    @apply rounded-tl-none;
-  }
-}
-
 
 /* Fourth Section */
 .fourth-section {
-  @apply bg-cover bg-center p-10 w-full;
+  @apply bg-cover bg-center w-full;
+  /*image: url('./images/Rectangle 4170.png');*/
   background-image: url('./images/Rectangle 4170.png');
 }
 
@@ -139,7 +138,7 @@ html{
 }
 
 .spreaded-phone {
-  @apply w-[500px];
+  @apply w-[500px] relative top-[30px] left-[150px];
 }
 
 .fourth-phone-image {
@@ -163,22 +162,22 @@ html{
 }
 
 .fourth-start-text {
-  @apply w-1/2 mx-auto;
+  @apply relative w-[330px] mx-auto top-[30px];
 }
 
 .fourth-start-text h1 {
-  @apply text-[36px] mb-5 text-white;
+  @apply text-[3.5rem] font-semibold mb-2.5 text-white;
 }
 
 .fourth-start-text p {
-  @apply text-lg leading-[1.6] mb-[30px] text-white;
+  @apply text-[1.2rem] text-white font-light;
 }
 
-.download-buttons a {
+.download-buttons-2 a {
   @apply inline-block m-[10px_10px_0_0];
 }
 
-.store-btn {
+.store-btn-2 {
   @apply h-[50px] w-auto;
 }
 
@@ -196,90 +195,108 @@ html{
   }
 }
 
-
-/* Fifth Section */
-.fifth-section {
-  @apply flex items-center justify-between pt-[100px] mb-2;
-}
-
-.ellipse-img {
-  @apply w-[500px];
-}
-
-.right-image {
-  @apply relative;
-}
-
-.person-image {
-  @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[60%];
-}
-
-.person {
-  @apply w-[350px];
-}
-
-.Payments-text {
-  @apply text-[2.5rem] w-[80%] mx-auto;
-}
-
-.Payments-text span {
-  @apply text-[#FF6400];
-}
-
-.left-text p {
-  @apply text-[#FF6400] w-[80%] mx-auto;
-}
-
-@media (max-width: 834px) {
-  .ellipse-img {
-    @apply w-[350px];
-  }
-
-  .person {
-    @apply w-[300px];
-  }
-}
-
-@media (max-width: 768px) {
+@layer components {
+  /* === Fifth Section === */
   .fifth-section {
-    @apply flex-col mb-4;
-  }
-
-  .Payments-text {
-    @apply w-full;
-  }
-
-  .left-text p {
-    @apply w-full pb-16;
+    @apply relative  flex items-center justify-between pt-[100px] mb-2 left-[300px] bottom-0;
   }
 
   .ellipse-img {
     @apply w-[400px];
   }
-}
 
+  .right-image {
+    @apply relative w-[800px] h-[600px] flex items-center justify-center;
+  }
 
-/* Last Section */
-.last {
-  @apply bg-[#FF6400] text-white text-center min-h-[500px];
-}
+  .person-image {
+    @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[60%];
+  }
 
-.last-text {
-  @apply flex flex-col items-center justify-center p-8;
-}
+  .person {
+    @apply w-[350px];
+  }
 
-.last-text span {
-  @apply text-[#111];
-}
+  .Payments-text {
+    @apply text-[2.5rem] w-4/5 mx-auto;
+  }
 
-.footer-links {
-  @apply bg-[#111] p-4 text-white;
-}
+  .Payments-text span {
+    @apply text-[#FF6400];
+  }
 
-.footer-link {
-  @apply flex gap-2.5 text-[1.2rem] cursor-pointer;
-}
+  .left-text p {
+    @apply text-[#FF6400] w-4/5 mx-auto;
+  }
 
-.footer-links-container {
-  @apply flex items-center justify-between;
+  /* === Responsive Adjustments (834px) === */
+  @media (max-width: 834px) {
+    .ellipse-img {
+      @apply w-[350px];
+    }
+
+    .person {
+      @apply w-[300px];
+    }
+  }
+
+  /* === Responsive Adjustments (768px) === */
+  @media (max-width: 768px) {
+    .fifth-section {
+      @apply flex-col mb-4;
+    }
+
+    .Payments-text {
+      @apply w-full;
+    }
+
+    .left-text p {
+      @apply w-full pb-16;
+    }
+
+    .ellipse-img {
+      @apply w-[400px];
+    }
+  }
+
+  /* === Last Section === */
+  .last {
+    @apply bg-[#FF6400] text-white text-center min-h-[500px];
+  }
+
+  .last-text {
+    @apply flex flex-col items-center justify-center p-8;
+  }
+
+  .last-text span {
+    @apply text-[#111];
+  }
+
+  /* === Footer === */
+  .footer-links {
+    @apply bg-[#111] p-4 text-white;
+  }
+
+  .footer-link {
+    @apply flex gap-2 text-[1.2rem] cursor-pointer;
+  }
+
+  .footer-links-container {
+    @apply flex items-center justify-between;
+  }
+
+  /* === Responsive Footer & Last Section (768px) === */
+  @media (max-width: 768px) {
+    .last-text {
+      @apply text-center items-center p-1 mx-auto w-[300px];
+    }
+
+    .last h1 {
+      @apply w-[400px];
+    }
+
+    .footer-link {
+      @apply text-base;
+    }
+  }
 }
