@@ -198,21 +198,30 @@ html{
 @layer components {
   /* === Fifth Section === */
   .fifth-section {
-    @apply relative  flex items-center justify-between pt-[100px] mb-2 left-[300px] bottom-0;
+    @apply flex items-center justify-between pt-[100px] mb-2 left-[300px] bottom-0;
   }
 
   .ellipse-img {
-    @apply w-[400px];
+    @apply relative w-[400px] top-[15px];
   }
 
   .right-image {
-    @apply relative w-[800px] h-[600px] flex items-center justify-center;
+    @apply relative w-[800px] h-[600px] flex items-center justify-center left-[500px] top-[15px];
   }
 
   .person-image {
-    @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[60%];
+    @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[60%] left-[425px];
   }
+.left-text {
+  @apply absolute left-[200px]
+}
+.left-text h1 {
+  @apply text-[3.5rem] font-semibold mb-2.5 text-white;
+}
 
+.left-text p {
+  @apply text-[1.2rem] text-white font-light;
+}
   .person {
     @apply w-[350px];
   }
@@ -264,12 +273,22 @@ html{
     @apply bg-[#FF6400] text-white text-center min-h-[500px];
   }
 
-  .last-text {
+  /*.last-text {
     @apply flex flex-col items-center justify-center p-8;
-  }
+  }*/
 
   .last-text span {
     @apply text-[#111];
+  }
+  .last h1 {
+  @apply text-[3.5rem] font-semibold mb-2.5 text-white;
+}
+
+.last p {
+  @apply text-[1.2rem] text-white font-light;
+}
+.qr-code {
+    @apply w-[200px] h-[200px] mx-auto my-4 top-[80px] relative;
   }
 
   /* === Footer === */
