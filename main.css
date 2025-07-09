@@ -9,7 +9,9 @@ html{
     background-color: whitesmoke;
 }
 .section-1 {
-  @apply relative;
+  @apply bg-cover bg-center w-full;
+  /*image: url('./images/Rectangle 4170.png');*/
+  background-image: url('/routag/images/Frame\ 51.png');
 }
 .logo-group {
     @apply flex gap-4 top-[6.25rem] left-[15rem] z-10 h-50 w-50 p-[3.2rem] absolute;
@@ -106,9 +108,9 @@ html{
   @apply text-[1.2rem] text-[#100F0D] font-light;
 }
 
-.the-why {
-  @apply grid grid-cols-4 gap-5 justify-center max-w-[1200px];
-}
+/*.the-why {
+  @apply;
+}*/
 
 
 .smally {
