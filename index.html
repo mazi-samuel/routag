@@ -1,241 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Routag</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
-    @font-face {
-      font-family: 'Uber Move Text';
-      src: url('https://fonts.cdnfonts.com/css/uber-move-text');
-    }
-  </style>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            'uber': ['Uber Move Text', 'sans-serif'],
-            'space': ['Space Grotesk', 'sans-serif']
-          },
-          backgroundImage: {
-            'hero': "url('images/Frame 51.png')",
-            'fourth': "url('images/Rectangle 4170.png')"
-          }
-        }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Routag..</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+      @font-face {
+        font-family: "Uber Move Text";
+        src: url("https://fonts.cdnfonts.com/css/uber-move-text");
       }
-    }
-  </script>
-</head>
-<body class="font-uber bg-gray-100 m-0 p-0 overflow-x-hidden">
-  <!-- Main Content Section-->
-  <main class="w-full relative">
-    <div class="bg-hero bg-cover bg-center w-full h-screen">
-      <div class="flex gap-4 absolute top-8 left-8 md:top-24 md:left-24 z-10 h-12 w-auto p-2 md:p-12 whitespace-nowrap">
-        <img src="images/Group 10 (1).png" alt="Routag Logo" class="h-12">
-        <h2 class="text-4xl md:text-5xl font-bold text-white font-space">Rout Tag</h2>
-      </div>
-      <div class="flex flex-col items-start gap-2 absolute top-48 md:top-72 left-8 md:left-24 z-10">
-        <h1 class="text-3xl md:text-5xl text-white font-bold mx-4">Send. <span class="text-black">Deliver</span>. Earn.</h1>
-      </div>
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              uber: ["Uber Move Text", "sans-serif"],
+              space: ["Space Grotesk", "sans-serif"],
+            },
+            backgroundImage: {
+              hero: "url('images/Frame 51.png')",
+              fourth: "url('images/Rectangle 4170.png')",
+              built: "url('images/built_frame.png')",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-uber">
+    <!-- Main Content Section-->
+    <main
+      class="pl-40 pt-8 bg-hero bg-cover bg-top w-full min-h-screen relative"
+    >
+      <img src="images/Group 10 (1).png" alt="Routag Logo" class="w-72" />
+      <div class="mt-72 max-w-[510px] space-y-4">
+        <h1 class="text-3xl md:text-5xl tracking-wider text-white font-bold">
+          Send.<span class="text-black"> Deliver</span>. Earn.
+        </h1>
 
-      <div class="flex flex-col items-start gap-2 absolute top-64 md:top-96 left-8 md:left-24 z-10">
-        <p class="mx-6 text-xl md:text-2xl text-white font-semibold">
-          Your packages delivered by everyday people and <br class="hidden md:block">trusted
-          businesses — faster, cheaper, and safer.
+        <p class="text-white text-lg tracking-wider font-light">
+          Your packages delivered by everyday people and trusted businesses —
+          faster, cheaper, and safer.
         </p>
       </div>
-      <div class="flex flex-row items-center gap-2 w-72 md:w-96 absolute top-96 md:top-[28rem] left-8 md:left-24 z-10">
+
+      <div class="flex items-center mt-10">
         <a href="https://play.google.com/store/games?hl=en">
-          <img src="images/[CITYPNG.COM]Get It On Google Play & Download App Store Buttons - 1500x1500 1 (1).png"
-            alt="Google Play" class="h-12 md:h-16"/>
+          <img src="images/playstore.png" alt="Google Play" class="w-48" />
         </a>
         <a href="https://www.apple.com/app-store/">
-          <img src="images/[CITYPNG.COM]Get It On Google Play & Download App Store Buttons - 1500x1500 2.png"
-            alt="App Store" class="h-12 md:h-16"/>
+          <img src="images/appstore.png" alt="App Store" class="w-48" />
         </a>
       </div>
-      <div class="w-64 md:w-[32rem] absolute top-48 md:top-72 left-1/2 md:left-[60%] z-10">
-        <img src="images/Group 58.png" alt="Phone" class="w-full"/>
+
+      <div class="absolute top-48 md:top-72 left-1/2 md:left-[60%] z-10">
+        <img src="images/Group 58.png" alt="Phone" class="" />
+      </div>
+    </main>
+    <!-- End Main Content Section-->
+
+    <div
+      class="relative min-h-screen  bg-built bg-cover bg-top flex items-center justify-center overflow-hidden py-12 px-4 sm:px-6 lg:px-8"
+    >
+      <!-- Background Wave Pattern -->
+      <div
+        class="absolute inset-0 opacity-20"
+        style="
+          background-image: url('/wave-pattern.png');
+          background-size: cover;
+          background-position: center;
+        "
+      ></div>
+
+      <div
+        class="relative z-10 flex flex-col lg:flex-row items-center justify-between max-w-7xl mx-auto w-full gap-12"
+      >
+         <!-- Left Section: Static Image -->
+      <div class="flex-1 flex justify-center lg:justify-start relative lg:ml-16 xl:ml-24">
+        <img src="images/Group 66.png" alt="App Illustration" class="max-w-full h-auto" />
+      </div>
+
+        <!-- Right Section: Text Content -->
+        <div class="flex-1 text-center lg:text-left lg:pr-16 xl:pr-24">
+          <h1
+            class="text-5xl sm:text-6xl font-extrabold text-black mb-6 leading-tight"
+          >
+            Built for Everyone
+          </h1>
+          <p
+            class="text-lg text-gray-800 mb-8 max-w-xl lg:max-w-none mx-auto lg:mx-0"
+          >
+            Senders get to move packages with ease and control the cost.
+            Individual couriers can earn on the side by delivering along your
+            travel routes, while businesses manage fleets, handle deliveries,
+            and boost revenue.
+          </p>
+          <div
+            class="flex flex-col sm:flex-row justify-center items-center lg:justify-start gap-4"
+          >
+            <a href="#" aria-label="Get it on Google Play">
+              <img
+              src="images/playstore.png"
+              alt="Get it on Google Play"
+              class="w-48"
+            />
+            </a>
+            <a href="#" aria-label="Download on the App Store">
+              <img
+              src="images/appstore.png"
+              alt="Download on the App Store"
+              class="w-48"
+            />
+            </a>
+          </div>
+        </div>
       </div>
     </div>
-  </main>
 
-  <section class="px-5 py-10 text-center max-w-6xl mx-auto mt-32 md:mt-48">
-    <div class="mb-10">
-      <h2 class="text-4xl md:text-5xl font-semibold mb-2 text-orange-600"><span class="text-black">How it</span> works</h2>
-      <p class="text-lg md:text-xl text-gray-900 font-light">
-        Send packages anywhere, anytime — or earn by delivering along your
-        route.
-      </p>
-    </div>
+    <section
+      class="relative w-full min-h-screen bg-[#f8f9fa] flex items-center justify-center pt-16 md:pt-24 lg:pt-32 overflow-hidden"
+    >
+      <div
+        class="absolute right-0 bottom-0 translate-x-1/3 translate-y-1/3 w-[600px] h-[600px] md:w-[800px] md:h-[800px] lg:w-[1000px] lg:h-[1000px] bg-[#fef2e8] rounded-full"
+      ></div>
 
-    <div class="flex flex-col md:flex-row justify-center gap-8">
-      <div class="relative max-w-md w-full overflow-hidden rounded-lg">
-        <img src="./images/image.png" alt="For Senders" class="w-full h-auto block"/>
-        <div class="absolute bottom-0 left-4 w-full p-5 pb-20 text-white text-left top-2/3">
-          <h3 class="m-0 mb-3 text-lg font-normal">For Senders</h3>
-          <p class="m-0 text-lg md:text-xl font-extralight">
-            Post your package, view available couriers traveling your way,
-            <br class="hidden md:block"/>
-            negotiate price and confirm pickup & track your delivery in
-            real-time
+      <div
+        class="container mx-auto px-4 flex flex-col lg:flex-row items-center justify-between gap-12"
+      >
+        <div
+          class="relative z-10 flex flex-col items-center lg:items-start text-center lg:text-left max-w-lg"
+        >
+          <h2
+            class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-black mb-4"
+          >
+            Simple & Secure <br />
+            <span class="text-[#ff6b35]">Payments</span>
+          </h2>
+          <p class="text-lg md:text-xl text-[#6b7280] max-w-md">
+            Fund your wallet and pay or get paid directly within the app. No
+            stress, no hidden fees.
           </p>
         </div>
-      </div>
 
-      <div class="relative max-w-md w-full overflow-hidden rounded-lg">
-        <img src="./images/image (1).png" alt="For Couriers" class="w-full h-auto block"/>
-        <div class="absolute bottom-0 left-4 w-full p-5 pb-20 text-white text-left top-2/3">
-          <h3 class="m-0 mb-3 text-lg font-normal">For Couriers (Individuals & Businesses):</h3>
-          <p class="m-0 text-lg md:text-xl font-extralight">
-            Set your travel route, get matched with package requests along
-            your route,
-            negotiate and earn as you deliver & withdraw earnings anytime
-          </p>
+        <div
+          class="relative z-10 w-full lg:w-1/2 flex justify-center lg:justify-end"
+        >
+          <img
+            src="images/lady_payments.png"
+            alt="Woman holding a credit card"
+            class=""
+            loading="eager"
+          />
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section>
-    <div class="flex flex-col items-center bg-gray-300 px-5 py-10 md:px-10 md:py-20 text-center mt-24 rounded-tl-[200px]">
-      <div class="mb-10 mt-12 md:mt-24">
-        <h1 class="text-4xl md:text-5xl font-semibold mb-3 text-black">Why Choose Us?</h1>
-        <p class="text-lg md:text-xl text-gray-900 font-light">
-          Send packages anywhere, anytime — or earn by delivering along your
-          route.
+    <div
+      class="relative h-[600px] bg-[#FF6600] text-white flex flex-col items-center justify-center overflow-hidden"
+    >
+      <!-- <div
+        class="absolute -bottom-40 -left-40 w-[400px] h-[400px] bg-route-[#FF9966] rounded-full opacity-30"
+      />
+      <div
+        class="absolute -top-40 -right-40 w-[400px] h-[400px] bg-route-[#FF9966] rounded-full opacity-30"
+      />
+      <div
+        class="absolute -bottom-20 right-0 w-[200px] h-[200px] bg-route-[#FF9966] rounded-full opacity-30"
+      />
+      <div
+        class="absolute top-0 left-0 w-[200px] h-[200px] bg-route-[#FF9966] rounded-full opacity-30"
+      /> -->
+
+      <div
+        class="relative z-10 flex flex-col items-center justify-center text-center px-4 pt-16 md:pt-24 lg:pt-32"
+      >
+        <h4 class="text-4xl md:text-5xl font-bold text-black mb-4">
+          Ready to <span class="text-white">send or deliver?</span>
+        </h4>
+        <p class="text-white text-lg tracking-wider font-light">
+          Join thousands of smart users sending and earning on the go.
         </p>
-      </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 justify-center max-w-6xl w-full px-5">
-        <div class="bg-gray-400 p-5 rounded-lg flex flex-col items-center justify-center text-center max-w-xs mx-auto">
-          <img src="./images/User Group Skin Type 7.png" alt="User Group Skin Type 7" class="max-w-20 h-auto mb-4" />
-          <h4 class="text-xl font-semibold mb-3 text-black">Flexible</h4>
-          <p class="text-lg font-medium text-black">delivery by everyday people and businesses</p>
-        </div>
-        <div class="bg-gray-400 p-5 rounded-lg flex flex-col items-center justify-center text-center max-w-xs mx-auto">
-          <img src="./images/Cheap.png" alt="Cheap" class="max-w-20 h-auto mb-4" />
-          <h4 class="text-xl font-semibold mb-3 text-black">Affordable rates</h4>
-          <p class="text-lg font-medium text-black">you set the price</p>
-        </div>
-        <div class="bg-gray-400 p-5 rounded-lg flex flex-col items-center justify-center text-center max-w-xs mx-auto">
-          <img src="./images/Wallet.png" alt="wallet" class="max-w-20 h-auto mb-4" />
-          <h4 class="text-xl font-semibold mb-3 text-black">Secure</h4>
-          <p class="text-lg font-medium text-black">in-app wallet & verified couriers</p>
-        </div>
-        <div class="bg-gray-400 p-5 rounded-lg flex flex-col items-center justify-center text-center max-w-xs mx-auto">
-          <img src="./images/Technical Support.png" alt="Group 59" class="max-w-20 h-auto mb-4" />
-          <h4 class="text-xl font-semibold mb-3 text-black">Support</h4>
-          <p class="text-lg font-medium text-black">Real-time tracking & dedicated support</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <div class="bg-fourth bg-cover bg-center w-full py-16">
-    <div class="flex flex-col-reverse md:flex-row items-center justify-between gap-10 w-full max-w-6xl mx-auto px-5">
-      <div class="w-full md:w-1/2 relative mt-10 md:mt-0">
-        <img src="./images/Group 66.png" alt="phone" class="w-full"/>
-        <div class="absolute top-5 -left-12 bg-white p-3 shadow-md rounded-lg text-sm leading-snug w-40 hidden lg:block">
-          Senders get to move packages with ease and control the cost
-        </div>
-        <div class="absolute top-32 -right-12 bg-white p-3 shadow-md rounded-lg text-sm leading-snug w-40 hidden lg:block">
-          Individual couriers can earn on the side by delivering along your travel routes
-        </div>
-        <div class="absolute bottom-16 left-0 bg-white p-3 shadow-md rounded-lg text-sm leading-snug w-40 hidden lg:block">
-          Businesses manage fleets, handle deliveries, and boost revenue
-        </div>
-      </div>
-      <div class="w-full md:w-1/2 text-center md:text-left">
-        <h1 class="text-4xl md:text-5xl font-semibold mb-3 text-white"><span class="text-black">Built for</span> Everyone</h1>
-        <p class="text-lg md:text-xl text-white font-light mb-6">
-          Senders get to move packages with ease and control the cost.
-          Individual couriers can earn on the side by delivering along your
-          travel routes, while businesses manage fleets, handle deliveries,
-          and boost revenue.
-        </p>
-        <div class="flex justify-center md:justify-start gap-4">
-          <a href="https://play.google.com/store/games?hl=en">
-            <img src="./images/[CITYPNG.COM]Get It On Google Play & Download App Store Buttons - 1500x1500 1 (1).png"
-              alt="Google Play" class="h-12"/>
+        <div class="flex flex-col sm:flex-row items-center mt-4 mb-12">
+          <a href="#" aria-label="Get it on Google Play">
+            <img
+              src="images/playstore.png"
+              alt="Get it on Google Play"
+              class="w-48"
+            />
           </a>
-          <a href="https://www.apple.com/app-store/">
-            <img src="./images/[CITYPNG.COM]Get It On Google Play & Download App Store Buttons - 1500x1500 2.png"
-              alt="App Store" class="h-12"/>
+          <a href="#" aria-label="Download on the App Store">
+            <img
+              src="images/appstore.png"
+              alt="Download on the App Store"
+              class="w-48"
+            />
           </a>
         </div>
-      </div>
-    </div>
-  </div>
 
-  <div class="py-16 px-5 flex flex-col md:flex-row items-center justify-center">
-    <div class="w-full md:w-1/2 text-center mb-10 md:mb-0">
-      <h1 class="text-3xl md:text-4xl font-semibold mb-3 text-black">Simple & <span class="text-orange-600">Secure Payments</span></h1>
-      <p class="text-lg md:text-xl text-orange-600 font-light max-w-lg mx-auto">
-        Fund your wallet and pay or get paid within the app. No stress, no
-        hidden fees
-      </p>
-    </div>
-    <div class="w-full md:w-1/2 flex justify-center">
-      <div class="relative w-72 h-72 md:w-96 md:h-96">
-        <img src="./images/Ellipse 73.png" alt="" class="w-full h-full"/>
-        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-          <img src="./images/image 10.png" alt="" class="w-64 md:w-80"/>
+        <div class="mb-16">
+          <img
+            src="images/QR Code.png"
+            alt="Scan to download app"
+            width="{200}"
+            height="{200}"
+            class="w-48 h-48 object-contain"
+          />
         </div>
       </div>
     </div>
-  </div>
-
-  <section class="relative py-20 bg-orange-600 overflow-hidden flex items-center justify-center">
-    <div class="absolute top-0 left-1/2 transform -translate-x-1/2">
-      <svg width="260" height="93" viewBox="0 0 260 93" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="129.951" cy="-37.0485" r="100.36" transform="rotate(-21.2909 129.951 -37.0485)" fill="#feae7a"/>
-        <path d="M160.286 20.1914L133.716 30.5459L121.34 -0.850736C107.974 -27.0806 83.9927 -22.7148 73.673 -17.2532L63.2534 -43.9905C111.997 -63.8779 140.57 -30.6417 148.764 -11.5377L160.286 20.1914Z" fill="#FF6400"/>
-        <path d="M134.24 30.3422L160.579 20.0778L137.78 -38.7831C129.825 -67.1954 150.239 -80.142 161.44 -83.0637L150.997 -109.863C102.075 -91.6926 103.678 -47.8427 110.595 -28.1891L134.24 30.3422Z" fill="#FF6400"/>
-      </svg>
-    </div>
-
-    <div class="absolute bottom-0 left-1/4 w-72 h-72 bg-orange-300 bg-opacity-20 rounded-full translate-y-32"></div>
-    <div class="absolute bottom-1/4 right-0 w-96 h-96 bg-orange-300 bg-opacity-30 rounded-full translate-x-1/2"></div>
-
-    <div class="relative z-10 text-center px-6 max-w-4xl mx-auto">
-      <div>
-        <h1 class="text-4xl md:text-5xl font-semibold mb-3 text-white"><span class="text-gray-900">Ready to </span> send or deliver?</h1>
-        <p class="text-xl md:text-2xl text-white">Join thousands of smart users sending and earning on the go</p>
-      </div>
-
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-5 mt-8">
-        <a href="https://play.google.com/store/games?hl=en">
-          <img src="./images/[CITYPNG.COM]Get It On Google Play & Download App Store Buttons - 1500x1500 1 (1).png"
-            alt="Google Play" class="h-12 md:h-14"/>
+    <footer
+      class="bg-[#1A1A1A] py-4 px-6 flex flex-col sm:flex-row items-center justify-between text-sm text-gray-400"
+    >
+      <div class="flex gap-4 mb-2 sm:mb-0">
+        <a href="#" aria-label="Instagram">
+          <Instagram class="h-5 w-5 text-gray-400 hover:text-white" />
         </a>
-        <a href="https://www.apple.com/app-store/">
-          <img src="./images/[CITYPNG.COM]Get It On Google Play & Download App Store Buttons - 1500x1500 2.png"
-            alt="App Store" class="h-12 md:h-14"/>
+        <a href="#" aria-label="LinkedIn">
+          <Linkedin class="h-5 w-5 text-gray-400 hover:text-white" />
+        </a>
+        <a href="#" aria-label="Twitter">
+          <Twitter class="h-5 w-5 text-gray-400 hover:text-white" />
         </a>
       </div>
-      <div class="w-40 h-40 mx-auto my-6 relative top-10">
-        <img src="./images/QR Code.png" class="w-full h-auto"/>
-      </div>
-    </div>
-  </section>
-
-  <div class="bg-gray-900 py-4 px-5 text-white">
-    <div class="max-w-6xl mx-auto">
-      <div class="flex flex-col sm:flex-row items-center justify-between py-3">
-        <div class="flex gap-4 text-xl cursor-pointer my-2">
-          <a href="#" class="text-white"><i class="ri-instagram-fill"></i></a>
-          <a href="#" class="text-white"><i class="ri-linkedin-box-fill"></i></a>
-          <a href="#" class="text-white"><i class="ri-twitter-fill"></i></a>
-        </div>
-        <div class="text-sm my-2">
-          Copyright 2025 Routag
-        </div>
-      </div>
-    </div>
-  </div>
-</body>
+      <p class="text-center sm:text-right">© Copyright 2025 Routag</p>
+    </footer>
+  </body>
 </html>
