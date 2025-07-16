@@ -9,11 +9,30 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css"
     />
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
       @font-face {
         font-family: "Uber Move Text";
         src: url("https://fonts.cdnfonts.com/css/uber-move-text");
+      }
+      
+      /* Floating animation for phone */
+      @keyframes floating {
+        0% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-15px);
+        }
+        100% {
+          transform: translateY(0px);
+        }
+      }
+      
+      .floating-phone {
+        animation: floating 3s ease-in-out infinite;
       }
     </style>
     <script>
@@ -39,8 +58,8 @@
     <main
       class="pl-40 pt-8 bg-hero bg-cover bg-top w-full min-h-screen relative"
     >
-      <img src="images/Group 10 (1).png" alt="Routag Logo" class="w-72" />
-      <div class="mt-72 max-w-[510px] space-y-4">
+      <img src="images/Group 10 (1).png" alt="Routag Logo" class="w-72" data-aos="fade-down" data-aos-delay="100" />
+      <div class="mt-72 max-w-[510px] space-y-4" data-aos="fade-right" data-aos-delay="300">
         <h1 class="text-3xl md:text-5xl tracking-wider text-white font-bold">
           Send.<span class="text-black"> Deliver</span>. Earn.
         </h1>
@@ -51,7 +70,7 @@
         </p>
       </div>
 
-      <div class="flex items-center mt-10">
+      <div class="flex items-center mt-10" data-aos="fade-up" data-aos-delay="500">
         <a href="https://play.google.com/store/games?hl=en">
           <img src="images/playstore.png" alt="Google Play" class="w-48" />
         </a>
@@ -61,12 +80,12 @@
       </div>
 
       <div class="absolute top-48 md:top-72 left-1/2 md:left-[60%] z-10">
-        <img src="images/Group 58.png" alt="Phone" class="" />
+        <img src="images/Group 58.png" alt="Phone" class="floating-phone" />
       </div>
     </main>
 
     <section class="px-5 py-10 text-center max-w-6xl mx-auto mt-32 md:mt-48">
-      <div class="mb-10">
+      <div class="mb-10" data-aos="fade-up">
         <h2 class="text-4xl md:text-5xl font-semibold mb-2 text-orange-600">
           <span class="text-black">How it</span> works
         </h2>
@@ -77,7 +96,7 @@
       </div>
 
       <div class="flex flex-col md:flex-row justify-center gap-8">
-        <div class="relative max-w-md w-full overflow-hidden rounded-lg">
+        <div class="relative max-w-md w-full overflow-hidden rounded-lg" data-aos="fade-right" data-aos-delay="200">
           <img
             src="./images/image.png"
             alt="For Senders"
@@ -96,7 +115,7 @@
           </div>
         </div>
 
-        <div class="relative max-w-md w-full overflow-hidden rounded-lg">
+        <div class="relative max-w-md w-full overflow-hidden rounded-lg" data-aos="fade-left" data-aos-delay="300">
           <img
             src="./images/image (1).png"
             alt="For Couriers"
@@ -122,7 +141,7 @@
       <div
         class="flex flex-col items-center bg-[#D9D9D9] px-5 py-10 md:px-10 md:py-20 text-center mt-24 sm:rounded-tl-[200px]"
       >
-        <div class="mb-10 mt-12">
+        <div class="mb-10 mt-12" data-aos="fade-up">
           <h1 class="text-4xl md:text-5xl font-semibold mb-3 text-black">
             Why Choose Us?
           </h1>
@@ -136,6 +155,7 @@
         >
           <div
             class="bg-[#CCCCCC] p-4 rounded-lg flex flex-col items-center justify-center text-center w-auto sm:w-full sm:h-full"
+            data-aos="flip-left" data-aos-delay="100"
           >
             <img
               src="./images/User Group Skin Type 7.png"
@@ -149,6 +169,7 @@
           </div>
           <div
             class="bg-[#CCCCCC] p-5 rounded-lg flex flex-col items-center justify-center text-center w-full h-full"
+            data-aos="flip-left" data-aos-delay="200"
           >
             <img
               src="./images/Cheap.png"
@@ -160,6 +181,7 @@
           </div>
           <div
             class="bg-[#CCCCCC] p-5 rounded-lg flex flex-col items-center justify-center text-center w-full h-full"
+            data-aos="flip-left" data-aos-delay="300"
           >
             <img
               src="./images/Wallet.png"
@@ -171,6 +193,7 @@
           </div>
           <div
             class="bg-[#CCCCCC] p-5 rounded-lg flex flex-col items-center justify-center text-center w-full h-full"
+            data-aos="flip-left" data-aos-delay="400"
           >
             <img
               src="./images/Technical Support.png"
@@ -193,7 +216,7 @@
           class="flex flex-col lg:flex-row items-center justify-between gap-12"
         >
           <!-- Left Image -->
-          <div class="lg:w-1/2 flex justify-center lg:justify-start">
+          <div class="lg:w-1/2 flex justify-center lg:justify-start" data-aos="fade-right" data-aos-duration="800">
             <img
               src="images/Group 66.png"
               alt="App Illustration"
@@ -202,7 +225,7 @@
           </div>
 
           <!-- Right Content -->
-          <div class="lg:w-1/2 text-center lg:text-left">
+          <div class="lg:w-1/2 text-center lg:text-left" data-aos="fade-left" data-aos-duration="800">
             <h2
               class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-black mb-6"
             >
@@ -251,7 +274,7 @@
           class="flex flex-col lg:flex-row items-center justify-between gap-12"
         >
           <!-- Left Content -->
-          <div class="lg:w-1/2 text-center lg:text-left">
+          <div class="lg:w-1/2 text-center lg:text-left" data-aos="fade-right" data-aos-duration="800">
             <h2
               class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-black mb-6"
             >
@@ -268,7 +291,7 @@
 
           <!-- Right Image -->
           <div
-            class="lg:w-1/2 relative z-10 flex justify-center lg:justify-end"
+            class="lg:w-1/2 relative z-10 flex justify-center lg:justify-end" data-aos="fade-left" data-aos-duration="800"
           >
             <img
               src="images/lady_payments.png"
@@ -318,15 +341,15 @@
       ></div>
 
       <div class="relative z-10 text-center px-6 max-w-4xl mx-auto">
-        <h3 class="text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-4">
+        <h3 class="text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-4" data-aos="fade-down">
           Ready to <span class="text-white">send or deliver?</span>
         </h3>
-        <p class="text-white text-lg font-light mb-8 max-w-2xl mx-auto">
+        <p class="text-white text-lg font-light mb-8 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
           Join thousands of smart users sending and earning on the go.
         </p>
 
         <div
-          class="flex flex-col sm:flex-row items-center justify-center mb-12"
+          class="flex flex-col sm:flex-row items-center justify-center mb-12" data-aos="fade-up" data-aos-delay="400"
         >
           <a href="#" aria-label="Get it on Google Play">
             <img
@@ -344,7 +367,7 @@
           </a>
         </div>
 
-        <div class="flex justify-center">
+        <div class="flex justify-center" data-aos="zoom-in" data-aos-delay="600">
           <img
             src="images/QR Code.png"
             alt="Scan to download app"
@@ -371,5 +394,18 @@
         </p>
       </div>
     </footer>
+
+    <!-- AOS JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+      // Initialize AOS
+      AOS.init({
+        duration: 1000, // Animation duration in milliseconds
+        once: false,    // Whether animation should happen only once
+        mirror: true,   // Whether elements should animate out while scrolling past them
+        offset: 120,    // Offset (in px) from the original trigger point
+        easing: 'ease-in-out', // Easing function
+      });
+    </script>
   </body>
 </html>
