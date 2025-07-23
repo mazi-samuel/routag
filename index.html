@@ -171,18 +171,22 @@
 
 <div class="bg-fourth bg-cover bg-center w-full py-16">
     <div class="flex flex-col-reverse md:flex-row items-center justify-between gap-10 w-full max-w-6xl mx-auto px-5">
-        <!-- Phone Image (now first in mobile view) -->
-        <div class="w-full md:w-1/2 relative mt-10 md:mt-0">
-            <img src="./images/Group 66.png" alt="phone" class="w-full max-w-xs mx-auto md:max-w-none"/>
+        <!-- Phone Image and Button Container (mobile: comes after text) -->
+        <div class="w-full md:w-1/2 flex flex-col items-center mt-6 md:mt-0">
+            <!-- Phone Image -->
+            <img src="./images/Group 66.png" alt="phone" class="w-full max-w-[280px] mx-auto md:max-w-none"/>
             
-            <!-- Mobile Download Button (positioned below phone) -->
-            <a id="universal-download-btn" href="#" class="md:hidden w-auto max-w-xs mx-auto mt-8 bg-black hover:bg-gray-800 text-white font-bold py-4 px-6 rounded-lg text-center text-lg block">
+            <!-- Mobile Download Button -->
+            <a id="mobile-download-btn" href="#" class="md:hidden mt-8 w-[180px] bg-black hover:bg-gray-800 text-white font-bold py-4 px-6 rounded-xl text-lg text-center transition-colors duration-300">
                 Download App
             </a>
         </div>
         
+        <!-- Text Content (mobile: appears first due to flex-col-reverse) -->
         <div class="w-full md:w-1/2 text-center md:text-left">
-            <h1 class="text-4xl md:text-5xl font-semibold mb-3 text-white"><span class="text-black">Built for</span> Everyone</h1>
+            <h1 class="text-4xl md:text-5xl font-semibold mb-3 text-white">
+                <span class="text-black">Built for</span> Everyone
+            </h1>
             <p class="text-lg md:text-xl text-white font-light mb-6">
                 Senders get to move packages with ease and control the cost.
                 Individual couriers can earn on the side by delivering along your
@@ -190,21 +194,6 @@
                 and boost revenue.
             </p>
             
-            <!-- Feature List (from your image) -->
-            <div class="hidden md:block space-y-4 text-white">
-                <div class="flex items-start">
-                    <span class="font-bold mr-2">•</span>
-                    <span>Send packages to any destination</span>
-                </div>
-                <div class="flex items-start">
-                    <span class="font-bold mr-2">•</span>
-                    <span>Earn by delivering packages along your route</span>
-                </div>
-                <div class="flex items-start">
-                    <span class="font-bold mr-2">•</span>
-                    <span>Manage a fleet and handle bulk deliveries</span>
-                </div>
-            </div>
             
             <!-- Desktop App Buttons -->
             <div class="hidden md:flex items-center mt-10">
@@ -228,7 +217,7 @@
 </div>
 
 <script>
-    document.getElementById('universal-download-btn').addEventListener('click', function(e) {
+    document.getElementById('mobile-download-btn').addEventListener('click', function(e) {
         e.preventDefault();
         
         const userAgent = navigator.userAgent.toLowerCase();
