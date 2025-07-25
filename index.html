@@ -1,219 +1,349 @@
+
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Routag</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+      @font-face {
+        font-family: "Uber Move Text";
+        src: url("https://fonts.cdnfonts.com/css/uber-move-text");
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              uber: ["Uber Move Text", "sans-serif"],
+              space: ["Space Grotesk", "sans-serif"],
+            },
+            backgroundImage: {
+              hero: "url('images/Frame 51.png')",
+              fourth: "url('images/Rectangle 4170.png')",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-uber bg-[#E0E0E0]">
+    <!-- Main Content Section-->
+    <main class="bg-hero bg-cover bg-top w-full min-h-screen font-uber relative flex flex-col items-center px-6 py-10 md:pl-40 md:pt-8 md:items-start md:justify-start">
+        <!-- Logo -->
+        <img src="images/Group 10 (1).png" alt="Routag Logo" class="w-32 md:w-72 mb-6 md:mb-0" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="main.css">
-  <title>Routag</title>
-</head>
+        <!-- Text Content -->
+        <div class="text-center md:text-left mt-12 md:mt-72 md:max-w-[510px] space-y-4">
+            <h1 class="text-3xl md:text-5xl font-bold tracking-wider text-white">
+                Send.<span class="text-black"> Deliver</span>. Earn.
+            </h1>
+            <p class="text-white md:text-lg text-sm tracking-wide font-light">
+                Your packages delivered by everyday people and trusted businesses — faster, cheaper, and safer.
+            </p>
+        </div>
 
-<body>
-  <!-- Header Section -->
-  <!--Main Content Section-->
-  <main class="main-content">
-    <div class="section-1">
-      <img src="images/Frame 51.png" alt="Routag Main Image" class="section-1-background">
-      <div class="logo-group">
-        <img src="images/Group 10 (1).png" alt="Routag Logo" class="logo">
-        <h2 class="logo-text">Rout Tag</h2>
-      </div>
-      <div class="intro-text">
-        <h1 class="intro-header">Send. <span class="text-black">Deliver</span>. Earn.</h1>
-      </div>
+        <!-- Phone Mockup (now comes before the button on mobile) -->
+        <div class="mt-10 md:absolute md:top-48 md:left-[60%]">
+            <img src="images/Group 58.png" alt="Phone" class="mx-auto w-80 md:w-auto" />
+        </div>
 
-      <div class="intro-text-2">
-        <p class="intro-paragraph">
-          Your packages delivered by everyday people and </br>trusted
-          businesses — faster, cheaper, and safer.
+        <!-- App Store Buttons (now positioned below phone on mobile) -->
+        <div class="flex flex-col items-center w-full mt-8 md:flex-row md:items-center md:gap-4 md:w-auto md:mt-10">
+            <!-- Mobile Download Button -->
+            <a id="mobile-download-btn" href="#" class="w-auto max-w-xs md:hidden bg-black hover:bg-gray-800 text-white font-bold py-4 px-6 rounded-xl text-center text-lg transition-colors duration-300">
+                Download App
+            </a>
+            
+            <!-- Desktop Buttons -->
+            <a href="https://play.google.com/store/games?hl=en" class="hidden md:block">
+                <img src="images/[CITYPNG.COM]Get It On Google Play & Download App Store Buttons - 1500x1500 1 (1).png" alt="Google Play" class="w-48" />
+            </a>
+            <a href="https://www.apple.com/app-store/" class="hidden md:block">
+                <img src="images/[CITYPNG.COM]Get It On Google Play & Download App Store Buttons - 1500x1500 2.png" alt="App Store" class="w-48" />
+            </a>
+        </div>
+    </main>
+
+    <script>
+        document.getElementById('mobile-download-btn').addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const userAgent = navigator.userAgent.toLowerCase();
+            const isAndroid = /android/.test(userAgent);
+            const isIOS = /iphone|ipad|ipod/.test(userAgent);
+            
+            if (isAndroid) {
+                window.location.href = 'https://play.google.com/store/games?hl=en';
+            } else if (isIOS) {
+                window.location.href = 'https://www.apple.com/app-store/';
+            } else {
+                window.location.href = 'https://play.google.com/store/games?hl=en';
+            }
+        });
+    </script>
+
+
+    <section class="px-4 md:px-5 py-10 max-w-6xl mx-auto mt-20 md:mt-48">
+  <div class="mb-8 md:mb-12 text-center">
+    <h2 class="text-3xl md:text-5xl font-semibold mb-3">
+      <span class="text-black">How it</span> <span class="text-orange-600">works</span>
+    </h2>
+    <p class="text-base md:text-lg text-gray-900 font-light px-2 md:px-0">
+      Send packages anywhere, anytime — or earn by delivering along your route.
+    </p>
+  </div>
+
+  <div class="flex flex-col md:flex-row justify-center gap-5 md:gap-8 px-2 md:px-0">
+    <!-- For Senders Card -->
+    <div class="relative w-full md:max-w-md overflow-hidden rounded-2xl">
+      <img src="./images/image.png" alt="For Senders" class="w-full h-64 md:h-80 object-cover"/>
+      <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+      <div class="absolute bottom-0 left-0 w-full p-5 md:p-6 text-white">
+        <h3 class="text-xl md:text-2xl font-bold mb-2 md:mb-3">For Senders</h3>
+        <p class="text-sm md:text-base font-light leading-normal md:leading-normal tracking-wider">
+          Post your package. View available couriers traveling your way, negotiate price and confirm pickup & track your delivery in real-time.
         </p>
       </div>
-      <div class="download-buttons">
-        <a href="https://play.google.com/store/games?hl=en">
-          <img src="images/[CITYPNG.COM]Get It On Google Play & Download App Store Buttons - 1500x1500 1 (1).png"
-            alt="Google Play" />
-        </a>
-        <a href="https://www.apple.com/app-store/">
-          <img src="images/[CITYPNG.COM]Get It On Google Play & Download App Store Buttons - 1500x1500 2.png"
-            alt="App Store" />
-        </a>
-      </div>
-      <div class="stacked-phone">
-        <img src="images/Group 58.png" alt="Phone" class="phoning" />
-      </div>
     </div>
 
-  </main>
-  <section class="second-section">
-    <div class="second-start-text">
-      <h2 class="how-it-works"><span class="blacky">How it</span> works</h2>
-      <p>
-        Send packages anywhere, anytime — or earn by delivering along your
-        route.
-      </p>
-    </div>
-
-    <div class="image-container">
-      <div class="image-card">
-        <img src="./images/image.png" alt="For Senders" />
-        <div class="image-text">
-          <h3>For Senders</h3>
-          <p>
-            Post your package, view available couriers traveling your way,
-            <br />
-            negotiate price and confirm pickup & track your delivery in
-            real-time
-          </p>
-        </div>
-      </div>
-
-      <div class="image-card">
-        <img src="./images/image (1).png" alt="For Couriers" />
-        <div class="image-text">
-          <h3>For Couriers (Individuals & Businesses):</h3>
-          <p>
-            Set your travel route, get matched with package requests along
-            your route,
-            negotiate and earn as you deliver & withdraw earnings anytime
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="third-section">
-      <div class="third-start-text">
-        <h1>Why Choose Us?</h1>
-        <p>
-          Send packages anywhere, anytime — or earn by delivering along your
-          route.
+    <!-- For Couriers Card -->
+    <div class="relative w-full md:max-w-md overflow-hidden rounded-2xl mt-4 md:mt-0">
+      <img src="./images/image (1).png" alt="For Couriers" class="w-full h-64 md:h-80 object-cover"/>
+      <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+      <div class="absolute bottom-0 left-0 w-full p-5 md:p-6 text-white">
+        <h3 class="text-xl md:text-2xl font-bold mb-2 md:mb-3">For Couriers (Individuals & Businesses:)</h3>
+        <p class="text-sm md:text-base font-light leading-normal md:leading-normal tracking-wider">
+          Set your travel route, get matched with package requests along your route, negotiate and earn as you deliver & withdraw earnings anytime.
         </p>
-      </div>
-      <div class="the-why grid grid-col-2 gap-5 justify-center max-w-[1200px] sm:grid-cols-4">
-        <div class="smally">
-          <img src="./images/User Group Skin Type 7.png" alt="User Group Skin Type 7" class="user-group-skin-type-7" />
-          <h4>Flexible</h4>
-          <p>delivery by everyday people and businesses</p>
-        </div>
-        <div class="smally">
-          <img src="./images/Cheap.png" alt="Cheap" class="cheap" />
-          <h4>Affordable rates</h4>
-          <p>you set the price</p>
-        </div>
-        <div class="smally">
-          <img src="./images/Wallet.png" alt="wallet" class="wallet" />
-          <h4>Secure</h4>
-          <p>in-app wallet & verified couriers</p>
-        </div>
-        <div class="smally">
-          <img src="./images/Technical Support.png" alt="Group 59" class="Technical-support" />
-          <h4>Support</h4>
-          <p>Real-time tracking & dedicated support</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="fourth-section">
-    <div class="content-wrapper">
-      <div class="spreaded-phone">
-        <img src="./images/Group 66.png" alt="phone" class="fourth-phone-image" />
-      </div>
-      <div class="fourth-start-text">
-        <h1><span class="text-black">Built for</span> Everyone</h1>
-        <p>
-          Senders get to move packages with ease and control the cost.
-          Individual couriers can earn on the side by delivering along your
-          travel routes, while businesses manage fleets, handle deliveries,
-          and boost revenue.
-        </p>
-        <div class="download-buttons-2">
-          <a href="https://play.google.com/store/games?hl=en">
-            <img src="./images/[CITYPNG.COM]Get It On Google Play & Download App Store Buttons - 1500x1500 1 (1).png"
-              alt="Google Play" class="store-btn-2" />
-          </a>
-          <a href="https://www.apple.com/app-store/">
-            <img src="./images/[CITYPNG.COM]Get It On Google Play & Download App Store Buttons - 1500x1500 2.png"
-              alt="App Store" class="store-btn-2" />
-          </a>
-        </div>
       </div>
     </div>
   </div>
+</section>
 
-  <div class="fifth-section h-[500px]">
-    <div class="left-text">
-      <h1 class="Payments-text text-black">Simple & <span>Secure Payments</span></h1>
-      <p>
+  <section class="mt-24">
+  <div class="bg-[#D9D9D9] px-5 py-12 md:px-10 md:py-20 text-center md:rounded-tl-[200px]">
+    <div class="max-w-4xl mx-auto mb-10 md:mb-16">
+      <h1 class="text-3xl md:text-5xl font-semibold mb-3 text-black">Why Choose Us</h1>
+      <p class="text-base md:text-xl text-gray-900 font-light">
+        Send packages anywhere, anytime — or earn by delivering along your route.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
+      <!-- Flexible -->
+      <div class="bg-[#CCCCCC] p-4 rounded-lg flex flex-col items-center text-center w-full">
+        <img src="./images/User Group Skin Type 7.png" alt="Flexible" class="w-16 h-16 md:w-20 md:h-20 mb-3"/>
+        <h4 class="text-lg md:text-xl font-semibold mb-2 text-black tracking-wider">Flexible</h4>
+        <p class="text-sm md:text-base font-medium text-black tracking-wider">delivery by everyday people and businesses</p>
+      </div>
+
+      <!-- Affordable rates -->
+      <div class="bg-[#CCCCCC] p-4 rounded-lg flex flex-col items-center text-center w-full">
+        <img src="./images/Cheap.png" alt="Affordable" class="w-16 h-16 md:w-20 md:h-20 mb-3"/>
+        <h4 class="text-lg md:text-xl font-semibold mb-2 text-black tracking-wider">Affordable rates</h4>
+        <p class="text-sm md:text-base font-medium text-black tracking-wider">you set the price</p>
+      </div>
+
+      <!-- Secure -->
+      <div class="bg-[#CCCCCC] p-4 rounded-lg flex flex-col items-center text-center w-full">
+        <img src="./images/Wallet.png" alt="Secure" class="w-16 h-16 md:w-20 md:h-20 mb-3"/>
+        <h4 class="text-lg md:text-xl font-semibold mb-2 text-black tracking-wider">Secure</h4>
+        <p class="text-sm md:text-base font-medium text-black tracking-wider">in-app wallet & verified couriers</p>
+      </div>
+
+      <!-- Support -->
+      <div class="bg-[#CCCCCC] p-4 rounded-lg flex flex-col items-center text-center w-full">
+        <img src="./images/Technical Support.png" alt="Support" class="w-16 h-16 md:w-20 md:h-20 mb-3"/>
+        <h4 class="text-lg md:text-xl font-semibold mb-2 text-black tracking-wider">Support</h4>
+        <p class="text-sm md:text-base font-medium text-black tracking-wider">Real-time tracking & dedicated support</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="bg-fourth bg-cover bg-center w-full py-16">
+    <div class="flex flex-col-reverse md:flex-row items-center justify-between gap-10 w-full max-w-6xl mx-auto px-5">
+        <!-- Phone Image and Button Container (mobile: comes after text) -->
+        <div class="w-full md:w-1/2 flex flex-col items-center mt-6 md:mt-0">
+            <!-- Phone Image -->
+            <img src="./images/Group 66.png" alt="phone" class="w-full max-w-[280px] mx-auto md:max-w-none"/>
+            
+            <!-- Mobile Download Button -->
+            <a id="mobile-download-btn" href="#" class="md:hidden mt-8 w-[180px] bg-black hover:bg-gray-800 text-white font-bold py-4 px-6 rounded-xl text-lg text-center transition-colors duration-300">
+                Download App
+            </a>
+        </div>
+        
+        <!-- Text Content (mobile: appears first due to flex-col-reverse) -->
+        <div class="w-full md:w-1/2 text-center md:text-left">
+            <h1 class="text-4xl md:text-5xl font-semibold mb-3 text-white">
+                <span class="text-black">Built for</span> Everyone
+            </h1>
+            <p class="text-lg md:text-xl text-white font-light mb-6">
+                Senders get to move packages with ease and control the cost.
+                Individual couriers can earn on the side by delivering along your
+                travel routes, while businesses manage fleets, handle deliveries,
+                and boost revenue.
+            </p>
+            
+            
+            <!-- Desktop App Buttons -->
+            <div class="hidden md:flex items-center mt-10">
+                <a href="https://play.google.com/store/games?hl=en">
+                    <img
+                        src="images/[CITYPNG.COM]Get It On Google Play & Download App Store Buttons - 1500x1500 1 (1).png"
+                        alt="Google Play"
+                        class="w-48"
+                    />
+                </a>
+                <a href="https://www.apple.com/app-store/">
+                    <img
+                        src="images/[CITYPNG.COM]Get It On Google Play & Download App Store Buttons - 1500x1500 2.png"
+                        alt="App Store"
+                        class="w-48"
+                    />
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById('mobile-download-btn').addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const userAgent = navigator.userAgent.toLowerCase();
+        const isAndroid = /android/.test(userAgent);
+        const isIOS = /iphone|ipad|ipod/.test(userAgent);
+        
+        if (isAndroid) {
+            window.location.href = 'https://play.google.com/store/games?hl=en';
+        } else if (isIOS) {
+            window.location.href = 'https://www.apple.com/app-store/';
+        } else {
+            if (confirm("Please select your app store")) {
+                window.location.href = 'https://play.google.com/store/games?hl=en';
+            } else {
+                window.location.href = 'https://www.apple.com/app-store/';
+            }
+        }
+    });
+</script>
+
+  <div class="py-16 px-5 flex gap-4 flex-col md:flex-row items-center justify-center text-left">
+    <div class="mb-10 md:mb-0 text-center md:text-left w-full md:max-w-[19rem] tracking-wider">
+      <h1 class="text-3xl md:text-3xl font-semibold mb-3 text-black">Simple & <span class="text-[#FF6400]">Secure Payments</span></h1>
+      <p class="text-lg md:text-sm text-[#FF6400] font-light teacking-wider">
         Fund your wallet and pay or get paid within the app. No stress, no
         hidden fees
       </p>
     </div>
-    <div class="right-image">
-      <img src="./images/Ellipse 73.png" alt="" class="ellipse-img" />
-      <div class="person-image">
-        <img src="./images/image 10.png" alt="" class="person" />
+    <div class="w-full md:w-1/2 flex justify-center">
+      <div class="relative w-[400px] h-[400px]">
+        <img src="./images/Ellipse 73.png" alt="image" class="w-auto"/>
+        <div class="absolute top-[82px] bottom-0 left-1/2 w-[400px] transform -translate-x-1/2 -translate-y-1/2">
+          <img src="./images/image 10.png" alt="" class="w-[800px]"/>
+        </div>
       </div>
     </div>
   </div>
 
-  <section class="relative h-[690px] pt-20 bg-[#FF6400] overflow-hidden flex items-center justify-center">
-    <!-- Decorative Background Circles -->
-    <div
-      class="absolute top-0 left-[300px]  ">
-
+  <section class="relative py-20 bg-[#FF6400] overflow-hidden flex items-center justify-center">
+    <!-- Background elements (unchanged) -->
+    <div class="absolute top-0 left-1/2 transform -translate-x-1/2">
       <svg width="260" height="93" viewBox="0 0 260 93" fill="none" xmlns="http://www.w3.org/2000/svg">
-<circle cx="129.951" cy="-37.0485" r="100.36" transform="rotate(-21.2909 129.951 -37.0485)" fill="#feae7a"/>
-<path d="M160.286 20.1914L133.716 30.5459L121.34 -0.850736C107.974 -27.0806 83.9927 -22.7148 73.673 -17.2532L63.2534 -43.9905C111.997 -63.8779 140.57 -30.6417 148.764 -11.5377L160.286 20.1914Z" fill="#FF6400"/>
-<path d="M134.24 30.3422L160.579 20.0778L137.78 -38.7831C129.825 -67.1954 150.239 -80.142 161.44 -83.0637L150.997 -109.863C102.075 -91.6926 103.678 -47.8427 110.595 -28.1891L134.24 30.3422Z" fill="#FF6400"/>
-</svg>
-
+        <circle cx="129.951" cy="-37.0485" r="100.36" transform="rotate(-21.2909 129.951 -37.0485)" fill="#feae7a"/>
+        <path d="M160.286 20.1914L133.716 30.5459L121.34 -0.850736C107.974 -27.0806 83.9927 -22.7148 73.673 -17.2532L63.2534 -43.9905C111.997 -63.8779 140.57 -30.6417 148.764 -11.5377L160.286 20.1914Z" fill="#FF6400"/>
+        <path d="M134.24 30.3422L160.579 20.0778L137.78 -38.7831C129.825 -67.1954 150.239 -80.142 161.44 -83.0637L150.997 -109.863C102.075 -91.6926 103.678 -47.8427 110.595 -28.1891L134.24 30.3422Z" fill="#FF6400"/>
+      </svg>
     </div>
+    <div class="absolute bottom-0 left-1/4 w-72 h-72 bg-orange-300 bg-opacity-20 rounded-full translate-y-32"></div>
+    <div class="absolute bottom-1/4 right-0 w-96 h-96 bg-orange-300 bg-opacity-30 rounded-full translate-x-1/2"></div>
 
-    <div class="absolute bottom-0 left-1/4 w-72 h-72 bg-[#feae7a] bg-opacity-20 rounded-full translate-y-[124px]"></div>
-    <div class="absolute bottom-1/4 right-0 w-96 h-96 bg-[#feae7a] bg-opacity-30 rounded-full translate-x-[190px]"></div>
+    <!-- Content -->
+    <div class="relative z-10 text-center px-6 max-w-4xl mx-auto">
+      <div>
+        <h1 class="text-4xl md:text-5xl font-semibold mb-3 text-white">
+          <span class="text-gray-900">Ready to </span>send or deliver?
+        </h1>
+        <p class="text-xl md:text-2xl text-white mb-6 md:mb-0">
+          Join thousands of smart users sending and earning on the go
+        </p>
+      </div>
 
-    <!-- Main Content -->
-    <div class="relative z-10 last text-center px-6  mx-auto">
-     <div class="last-texted ">
-      <h1 class="last-text"><span>Ready to </span> send or deliver?</h1>
-      <p class="text-2xl">Join thousands of smart users sending and earning on the go</p>
-    </div>
+      <!-- Mobile Download Button (positioned below phone) -->
+        <a id="mobile-download-btn" href="#" class="w-auto max-w-xs md:hidden bg-black hover:bg-gray-800 text-white font-bold py-4 px-6 rounded-xl text-center text-lg transition-colors duration-300">
+            Download App
+        </a>
 
-      <div class="flex items-center justify-between mt-8">
+      <!-- Desktop App Buttons -->
+      <div class="hidden md:flex items-center justify-center mt-10">
         <a href="https://play.google.com/store/games?hl=en">
-          <img src="./images/[CITYPNG.COM]Get It On Google Play & Download App Store Buttons - 1500x1500 1 (1).png"
-            alt="Google Play" class="store-btn" />
+          <img
+            src="images/[CITYPNG.COM]Get It On Google Play & Download App Store Buttons - 1500x1500 1 (1).png"
+            alt="Google Play"
+            class="w-48"
+          />
         </a>
         <a href="https://www.apple.com/app-store/">
-          <img src="./images/[CITYPNG.COM]Get It On Google Play & Download App Store Buttons - 1500x1500 2.png"
-            alt="App Store" class="store-btn" />
+          <img
+            src="images/[CITYPNG.COM]Get It On Google Play & Download App Store Buttons - 1500x1500 2.png"
+            alt="App Store"
+            class="w-48"
+          />
         </a>
       </div>
-      <div class="qr-code">
-        <img src="./images/QR Code.png"></img>
+
+      <!-- QR Code (hidden on mobile) -->
+      <div class="hidden md:block w-40 h-40 mx-auto mt-10">
+        <img src="./images/QR Code.png" class="w-full h-auto" alt="QR Code"/>
       </div>
-
     </div>
-  </section>
+</section>
 
-  
+<script>
+  document.getElementById('mobile-download-btn').addEventListener('click', function(e) {
+    e.preventDefault();
+    
+    const userAgent = navigator.userAgent.toLowerCase();
+    const isAndroid = /android/.test(userAgent);
+    const isIOS = /iphone|ipad|ipod/.test(userAgent);
+    
+    if (isAndroid) {
+      window.location.href = 'https://play.google.com/store/games?hl=en';
+    } else if (isIOS) {
+      window.location.href = 'https://www.apple.com/app-store/';
+    } else {
+      if (confirm("Please select your app store")) {
+        window.location.href = 'https://play.google.com/store/games?hl=en';
+      } else {
+        window.location.href = 'https://www.apple.com/app-store/';
+      }
+    }
+  });
+</script>
 
-  <div class="footer-links">
-    <div class="container">
-      <div class="footer-links-container">
-        <div class="footer-link">
-          <a href="#"><i class="ri-instagram-fill"></i></a>
-          <a href="#"><i class="ri-linkedin-box-fill"></i></a>
-          <a href="#"><i class="ri-twitter-fill"></i></a>
+  <div class="bg-gray-900 text-white justify-between items-center">
+    <div class="max-w-6xl mx-auto justify-center items-center">
+      <div class="flex flex-col sm:flex-row items-center justify-between">
+        <div class="flex gap-4 text-xl cursor-pointer my-2">
+          <a href="#" class="text-white"><i class="ri-instagram-fill"></i></a>
+          <a href="#" class="text-white"><i class="ri-linkedin-box-fill"></i></a>
+          <a href="#" class="text-white"><i class="ri-twitter-fill"></i></a>
         </div>
-        <div class="footer-copyright">
+        <div class="text-sm my-2">
           Copyright 2025 Routag
         </div>
       </div>
     </div>
   </div>
-</body>
-
+  </body>
 </html>
